@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alumni Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f5f7fb;
+            color: #333;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #1e293b;
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+        }
+
+        .sidebar h2 {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #334155;
+        }
+
+        .main-content {
+            margin-left: 220px;
+            padding: 30px;
+            width: 100%;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .topbar h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .topbar .user {
+            background-color: #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Alumni Portal</h2>
+        <a href="#">🏠 Dashboard</a>
+        <a href="#">📄 Profile</a>
+        <a href="#">👥 Directory</a>
+        <a href="#">📬 Messages</a>
+        <a href="#">📅 Events</a>
+        <a href="#">🚪 Logout</a>
+    </div>
+
+    <div class="main-content">
+        <div class="topbar">
+            <h1>Welcome Back, Alumni!</h1>
+            <div class="user">👤 John Doe</div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Upcoming Events</h3>
+                <p>Stay connected by joining upcoming alumni events and reunions.</p>
+            </div>
+
+            <div class="card">
+                <h3>Alumni Directory</h3>
+                <p>Browse and connect with alumni by batch, field or location.</p>
+            </div>
+
+            <div class="card">
+                <h3>Messages</h3>
+                <p>Check your inbox and continue conversations with fellow alumni.</p>
+            </div>
+
+            <div class="card">
+                <h3>Job Board</h3>
+                <p>Find or share job opportunities within the alumni network.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
